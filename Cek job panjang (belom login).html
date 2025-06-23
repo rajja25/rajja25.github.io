@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="initial-scale=1, width=device-width">
+  	
+  	<link rel="stylesheet"  href="css/Cek job panjang (belom login).css" />
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" />
+  	
+  	
+  	
+</head>
+<body>
+  	
+  	<div class="cek-job-panjang-belom-login">
+    		<div class="footer">
+      			<div class="freework-parent">
+        				<b class="freework">FreeWork</b>
+        				<div class="freework-merupakan-platform-fr-wrapper">
+          					<div class="freework-merupakan-platform">FreeWork merupakan platform freelancer untuk mempermudah orang-orang bisa mendapatkan pekerjaannya atau sebagai penghasilan sampingan.</div>
+        				</div>
+        				<div class="sosmed">
+          					<img class="iconlinkedin" alt="" src="Icon/Linkedin.svg">
+          					
+          					<img class="iconyoutube" alt="" src="Icon/Youtube.svg">
+          					
+          					<img class="icontiktok" alt="" src="Icon/Tiktok.svg">
+          					
+          					<img class="iconinstagram" alt="" src="Icon/Instagram.svg">
+          					
+          					<img class="iconfacebook" alt="" src="Icon/Facebook.svg">
+          					
+        				</div>
+      			</div>
+      			<div class="footer-pilihan-parent">
+        				<div class="footer-pilihan">
+          					<div class="untuk-freelancer-parent">
+            						<b class="freework">Untuk Freelancer</b>
+            						<div class="syarat-ketentuan-freelancer-container">
+              							<p class="syarat-ketentuan-freelancer">Syarat ketentuan Freelancer</p>
+              							<p class="syarat-ketentuan-freelancer">&nbsp;</p>
+              							<p class="syarat-ketentuan-freelancer">Petunjuk Freelancer</p>
+              							<p class="syarat-ketentuan-freelancer">&nbsp;</p>
+              							<p class="syarat-ketentuan-freelancer">Manfaat Freelancer</p>
+              							<p class="syarat-ketentuan-freelancer">&nbsp;</p>
+              							<p class="syarat-ketentuan-freelancer">Komunitas</p>
+            						</div>
+          					</div>
+          					<div class="untuk-klien-parent">
+            						<b class="freework">Untuk Klien</b>
+            						<div class="syarat-ketentuan-freelancer-container">
+              							<p class="syarat-ketentuan-freelancer">Syarat ketentuan Klien</p>
+              							<p class="syarat-ketentuan-freelancer">&nbsp;</p>
+              							<p class="syarat-ketentuan-freelancer">Petunjuk Klien</p>
+            						</div>
+          					</div>
+          					<div class="untuk-freelancer-parent">
+            						<b class="freework">Perusahaan</b>
+            						<div class="syarat-ketentuan-freelancer-container">
+              							<p class="syarat-ketentuan-freelancer">Tentang Kami</p>
+              							<p class="syarat-ketentuan-freelancer">&nbsp;</p>
+              							<p class="syarat-ketentuan-freelancer">Syarat Ketentuan</p>
+              							<p class="syarat-ketentuan-freelancer">&nbsp;</p>
+              							<p class="syarat-ketentuan-freelancer">Peraturan Privasi</p>
+              							<p class="syarat-ketentuan-freelancer">&nbsp;</p>
+              							<p class="syarat-ketentuan-freelancer">Customer Service</p>
+            						</div>
+          					</div>
+        				</div>
+        				<div class="iconcopyright-parent">
+          					<img class="iconcopyright" alt="" src="Icon/Copyright.svg">
+          					
+          					<div class="copyright-2024-freework">Copyright 2024. FreeWork. All Rights Reserved</div>
+        				</div>
+      			</div>
+    		</div>
+    		<div class="paling-populer">
+      			<div class="iconmonitor-parent">
+        				<img class="iconmonitor" alt="" src="Icon/Monitor.svg">
+        				
+        				<b class="teknologi">Teknologi</b>
+      			</div>
+      			<div class="headline-programa" id="headlineProgramAContainer">
+        				<img class="iconhome" alt="" src="Icon/Home.svg">
+        				
+        				<!-- <div class="freework-merupakan-platform">Kembali ke halaman utama</div> -->
+                         <a href="Halaman Utama.html" id="Kembali ke halaman utama">Kembali ke halaman utama</a>
+      			</div>
+      			<div class="michael-parent">
+                                        <div class="client-list" id="clientContainer"></div>
+						<script>
+						fetch("clients.json")
+							.then((response) => response.json())
+							.then((data) => {
+							const container = document.getElementById("clientContainer");
+
+							data.forEach((freelancer) => {
+								const element = document.createElement("div");
+								element.classList.add("michael");
+								element.innerHTML = `
+								<div class="frame-parent">
+									<div class="frame-child">
+									<img class="icon-user" alt="" src="${freelancer.avatar}">
+									</div>
+									<b class="michael1">${freelancer.name}</b>
+								</div>
+								<div class="button-freelancer">
+									<div class="button">
+									<div class="freework-merupakan-platform">Chat ${freelancer.name}</div>
+									<img class="iconchat" alt="" src="Icon/Chat.svg">
+									</div>
+									<div class="button">
+									<div class="freework-merupakan-platform">Rekrut ${freelancer.name}</div>
+									<img class="iconchat" alt="" src="Icon/Next putih.svg">
+									</div>
+								</div>
+								<div class="iconstar-parent">
+									<img class="iconstar" alt="" src="Icon/Star.svg">
+									<div class="freework-merupakan-platform">Rating ${freelancer.rating}</div>
+								</div>
+								<div class="iconlokasi-parent">
+									<img class="iconlokasi" alt="" src="Icon/Lokasi.svg">
+									<div class="freework-merupakan-platform">${freelancer.location}</div>
+								</div>
+								<div class="iconstar-parent">
+									<img class="iconfast" alt="" src="Icon/Fast.svg">
+									<div class="freework-merupakan-platform">${freelancer.deadline}</div>
+								</div>
+								<div class="iconmoney-parent">
+									<img class="iconmoney" alt="" src="Icon/Money.svg">
+									<div class="freework-merupakan-platform">${freelancer.price}</div>
+								</div>
+								<div class="iconmoney-parent">
+									<img class="iconbenar" alt="" src="Icon/Benar.svg">
+									<div class="freework-merupakan-platform">${freelancer.status}</div>
+								</div>
+								`;
+								container.appendChild(element);
+							});
+							});
+						</script>
+        				<!-- <div class="michael">
+          					<div class="frame-parent">
+            					<div class="frame-child">
+                                    <img class="icon-user" alt="" src="Icon\User putih.svg">
+                                </div>  
+            						<b class="pt-xyz">PT. XYZ</b>
+          					</div>
+          					<div class="button-freelancer">
+            						<div class="button">
+              							<div class="freework-merupakan-platform">Chat PT. XYZ</div>
+              							<img class="iconchat" alt="" src="Icon/Chat.svg">
+              							
+            						</div>
+            						<div class="button">
+              							<div class="freework-merupakan-platform">Ambil Pekerjaan</div>
+              							<img class="iconchat" alt="" src="Icon/Next putih.svg">
+              							
+            						</div>
+          					</div>
+          					<div class="iconstar-parent">
+            						<img class="iconstar" alt="" src="Icon/Star.svg">
+            						
+            						<div class="freework-merupakan-platform">Rating 4.9</div>
+          					</div>
+          					<div class="iconlokasi-parent">
+            						<img class="iconlokasi" alt="" src="Icon/Lokasi.svg">
+            						
+            						<div class="freework-merupakan-platform">Jakarta, Indonesia</div>
+          					</div>
+          					<div class="iconstar-parent">
+            						<img class="iconfast" alt="" src="Icon/Fast.svg">
+            						
+            						<div class="freework-merupakan-platform">Maksimal 5 hari</div>
+          					</div>
+          					<div class="iconmoney-parent">
+            						<img class="iconmoney" alt="" src="Icon/Money.svg">
+            						
+            						<div class="freework-merupakan-platform">Rp 1.000.000,00</div>
+          					</div>
+          					<div class="iconmoney-parent">
+            						<img class="iconbenar" alt="" src="Icon/Benar.svg">
+            						
+            						<div class="freework-merupakan-platform">Aktif Merekrut</div>
+          					</div>
+        				</div> -->
+        				<div class="frame-group">
+          					<div class="entry-data-verifikasi-gambar-wrapper">
+            						<b class="freework-merupakan-platform">Entry Data & Verifikasi Gambar Produk</b>
+          					</div>
+          					<div class="frame-container">
+            						<div class="tentang-pekerjaan-parent">
+              							<div class="tentang-pekerjaan">Tentang Pekerjaan</div>
+              							<div class="kamu-akan-bertugas-untuk-memas-wrapper">
+                								<div class="kamu-akan-bertugas-container">
+                  									<p class="syarat-ketentuan-freelancer">Kamu akan bertugas untuk memasukkan dan memverifikasi data produk digital untuk katalog marketplace kami.</p>
+                  									<p class="syarat-ketentuan-freelancer">Berikut tugas utamanya:</p>
+                  									<p class="syarat-ketentuan-freelancer">&nbsp;</p>
+                  									<ol class="menerima-100-file-gambar-produ">
+                    										<li class="menerima-100-file">Menerima 100 file gambar produk (.jpg/.png) dari kami melalui dashboard.</li>
+                    										<li class="menerima-100-file">Memeriksa kelengkapan dan kualitas gambar (apakah resolusi cukup, tidak blur, dan tidak mengandung watermark).</li>
+                    										<li class="menerima-100-file">Memasukkan nama produk, kategori, dan deskripsi singkat ke template Excel yang sudah disiapkan.</li>
+                    										<li class="menerima-100-file">Menambahkan 3 kata kunci (keywords) relevan untuk setiap produk.</li>
+                    										<li>Upload kembali file Excel dan beri checklist gambar yang lolos verifikasi.</li>
+                  									</ol>
+                								</div>
+              							</div>
+            						</div>
+            						<a href="Cek job (belom login).html" class="button4">
+              							<div class="freework-merupakan-platform">Selengkapnya</div>
+              							<img class="iconup" alt="" src="Icon/Up putih.svg">
+              							
+                                    </a>
+          					</div>
+          					<div class="frame-wrapper">
+            						<div class="tentang-pekerjaan-parent">
+              							<div class="tentang-pekerjaan">Kualifikasi</div>
+              							<div class="teliti-dan-rapi-dalam-input-da-wrapper">
+                								<div class="kamu-akan-bertugas-container">
+                  									<ol class="menerima-100-file-gambar-produ">
+                    										<li class="menerima-100-file">Teliti dan rapi dalam input data</li>
+                    										<li class="menerima-100-file">Bisa menggunakan Microsoft Excel atau Google Sheets</li>
+                    										<li class="menerima-100-file">Memiliki koneksi internet stabil</li>
+                    										<li>Mampu menyelesaikan dalam waktu maksimal 5 hari</li>
+                  									</ol>
+                								</div>
+              							</div>
+            						</div>
+          					</div>
+          					<div class="frame-div">
+            						<div class="tentang-pekerjaan-parent">
+              							<div class="tentang-pekerjaan">Fasilitas</div>
+              							<div class="template-dan-panduan-tugas-len-wrapper">
+                								<div class="kamu-akan-bertugas-container">Template dan panduan tugas lengkap</div>
+              							</div>
+            						</div>
+          					</div>
+        				</div>
+        				<!-- <div class="icon">
+          					<img class="vector-icon" alt="" src="Icon/Unlove.svg">
+          					
+        				</div> -->
+
+                        <div class="icon" onclick="toggleLove(this)">
+                            <img class="vector-icon" src="Icon/Unlove.svg" alt="Love Icon">
+                        </div>
+                        <script>
+                        function toggleLove(element) {
+                            const img = element.querySelector("img");
+                            const currentSrc = img.getAttribute("src");
+
+                            if (currentSrc.includes("Unlove.svg")) {
+                            img.setAttribute("src", "Icon/Love.svg");
+                            } else {
+                            img.setAttribute("src", "Icon/Unlove.svg");
+                            }
+                        }
+                        </script>                    
+
+      			</div>
+      			<div class="tentang-perusahaan-wrapper">
+        				<div class="tentang-perusahaan">Tentang Perusahaan</div>
+      			</div>
+      			<div class="deskripsi-parent">
+        				<div class="deskripsi">Deskripsi</div>
+        				<div class="judul-pekerjaan">
+          					<div class="freework">Jenis Perusahaan</div>
+          					<div class="perseroan-terbatas-pt-wrapper">
+            						<div class="teknologi">Perseroan Terbatas (PT)</div>
+          					</div>
+        				</div>
+        				<div class="judul-pekerjaan">
+          					<div class="freework">Deksripsi Perusahaan</div>
+          					<div class="perseroan-terbatas-pt-wrapper">
+            						<div class="teknologi">PT. XYZ adalah perusahaan teknologi digital yang berfokus pada pengembangan solusi perangkat lunak dan layanan IT untuk kebutuhan bisnis modern. Kami berkomitmen memberikan inovasi yang relevan, efisien, dan terintegrasi bagi berbagai sektor industri di Indonesia. Dengan pengalaman lebih dari 5 tahun, PT. XYZ telah dipercaya oleh puluhan klien dari skala startup hingga korporasi besar.</div>
+          					</div>
+        				</div>
+      			</div>
+      			<div class="bidang-parent">
+        				<div class="tentang-pekerjaan">Bidang</div>
+        				<div class="frame-wrapper1">
+          					<div class="frame-parent1">
+            						<div class="teknologi-informasi-wrapper">
+              							<div class="freework-merupakan-platform">Teknologi Informasi</div>
+            						</div>
+            						<div class="teknologi-informasi-wrapper">
+              							<div class="freework-merupakan-platform">Jasa Digital</div>
+            						</div>
+          					</div>
+        				</div>
+      			</div>
+      			<div class="frame-parent2">
+        				<div class="foto-perusahaan-wrapper">
+          					<div class="foto-perusahaan">Foto Perusahaan</div>
+        				</div>
+        				<div class="frame-parent3">
+          					<img class="frame-item" alt="" src="foto\portofolio.png">
+          					
+          					<img class="frame-item" alt="" src="foto\portofolio.png">
+          					
+          					<img class="frame-item" alt="" src="foto\portofolio.png">
+          					
+        				</div>
+      			</div>
+      			<div class="tentang-perusahaan-wrapper">
+        				<div class="review">Review</div>
+      			</div>
+      			<div class="paling-populer-inner">
+        				<div class="frame-parent4">
+          					<div class="alfi-freelance-data-entry-ra-wrapper">
+            						<div class="alfi-freelance-container">
+              							<p class="alfi-freelance">Alfi - Freelance Data EntryRating: ★★★★★</p>
+              							<p class="blank-line8">&nbsp;</p>
+              							<p class="syarat-ketentuan-freelancer">20 Januari 2025</p>
+              							<p class="syarat-ketentuan-freelancer">Saya merasa nyaman bekerja dengan PT. XYZ. Proyeknya jelas, tidak perlu seleksi ribet, dan saya bisa langsung mulai kerja sesuai waktu saya.</p>
+            						</div>
+          					</div>
+          					<div class="alfi-freelance-data-entry-ra-wrapper">
+            						<div class="alfi-freelance-container">
+              							<p class="alfi-freelance">Rino - Mahasiswa & Freelancer Paruh WaktuRating: ★★★★★</p>
+              							<p class="blank-line8">&nbsp;</p>
+              							<p class="syarat-ketentuan-freelancer">12 Mei 2024</p>
+              							<p class="syarat-ketentuan-freelancer">Instruksi kerja sangat lengkap. Saya bisa menyelesaikan tugas dengan percaya diri meskipun ini pertama kali ambil kerja online.</p>
+            						</div>
+          					</div>
+        				</div>
+      			</div>
+      			<div class="next-halaman">
+        				<div class="freework">Berikutnya</div>
+        				<div class="iconback-parent">
+          					<img class="iconback" alt="" src="Icon/Back.svg">
+          					
+          					<div class="frame-parent5">
+            						<div class="wrapper">
+              							<div class="freework">1</div>
+            						</div>
+            						<div class="container">
+              							<div class="freework">2</div>
+            						</div>
+            						<div class="container">
+              							<div class="freework">3</div>
+            						</div>
+            						<div class="container">
+              							<div class="freework">4</div>
+            						</div>
+            						<div class="container">
+              							<div class="freework">5</div>
+            						</div>
+            						<div class="container">
+              							<div class="freework">6</div>
+            						</div>
+            						<div class="container">
+              							<div class="freework">8</div>
+            						</div>
+            						<div class="container">
+              							<div class="freework">9</div>
+            						</div>
+            						<div class="container">
+              							<div class="freework">10</div>
+            						</div>
+          					</div>
+          					<img class="iconback" alt="" src="Icon/Next.svg">
+          					
+        				</div>
+      			</div>
+    		</div>
+    		<div class="navbar-user">
+      			<div class="logo-brand">
+        				<b class="freework-merupakan-platform">FreeWork</b>
+      			</div>
+      			<div class="search">
+        				<img class="iconsearch" alt="" src="Icon/Search.svg">
+        				
+        				<div class="freework-merupakan-platform">Cari bidang apa?</div>
+      			</div>
+      			<a href="Teknologi (Pekerja).html" class="title-prakerja nav-link" id="cari-pekerja">Cari Pekerja</a>
+				<a href="Teknologi (kerja).html" class="title-prakerja nav-link" id="kerja-langsung">Kerja langsung</a>
+      			<div class="iconmoney-parent">
+        				<div class="freework-merupakan-platform">Bahasa</div>
+        				<img class="iconglobal" alt="" src="Icon/Global putih.svg">
+        				
+      			</div>
+      			<div class="button6">
+        				<div class="freework-merupakan-platform">Masuk</div>
+        				<img class="iconchat" alt="" src="Icon/Login oren.svg">
+        				
+      			</div>
+    		</div>
+  	</div>
+  	
+  	
+  	
+  	
+  	<script>
+    		var headlineProgramAContainer = document.getElementById("headlineProgramAContainer");
+    		if(headlineProgramAContainer) {
+      			headlineProgramAContainer.addEventListener("click", function (e) {
+        				// Add your code here
+      			});
+    		}</script></body>
+</html>
