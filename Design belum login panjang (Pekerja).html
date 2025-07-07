@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="initial-scale=1, width=device-width">
+  	
+  	<link rel="stylesheet"  href="css/Design belum login panjang (Pekerja).css" />
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" />
+  	
+  	
+  	
+</head>
+<body>
+  	
+  	<div class="teknologi-michael-belum-login">
+    		<div class="paling-populer">
+      			<div class="iconmonitor-parent">
+        				<img class="iconmonitor" alt="" src="Icon/Design.svg">
+        				
+        				<b class="teknologi">Design</b>
+      			</div>
+      			<div class="headline-programa" id="headlineProgramAContainer">
+        				<img class="iconhome" alt="" src="Icon/Home.svg">
+        				
+        				<!-- <div class="text">Kembali ke halaman utama</div> -->
+                         <a href="Halaman Utama.html" id="Kembali ke halaman utama">Kembali ke halaman utama</a>
+      			</div>
+      			<div class="michael-parent">
+                    <div class="freelancer-list" id="freelancerContainer"></div>
+						<script>
+						fetch("Cyntia.json")
+							.then((response) => response.json())
+							.then((data) => {
+							const container = document.getElementById("freelancerContainer");
+
+							data.forEach((freelancer) => {
+								const element = document.createElement("div");
+								element.classList.add("michael");
+								element.innerHTML = `
+								<div class="frame-parent">
+									<div class="frame-child">
+									<img class="icon-user" alt="" src="${freelancer.avatar}">
+									</div>
+									<b class="michael1">${freelancer.name}</b>
+								</div>
+								<div class="button-freelancer">
+									<div class="button">
+									<div class="freework-merupakan-platform">Chat ${freelancer.name}</div>
+									<img class="iconchat" alt="" src="Icon/Chat.svg">
+									</div>
+									<div class="button">
+									<div class="freework-merupakan-platform">Rekrut ${freelancer.name}</div>
+									<img class="iconchat" alt="" src="Icon/Next putih.svg">
+									</div>
+								</div>
+								<div class="iconstar-parent">
+									<img class="iconstar" alt="" src="Icon/Star.svg">
+									<div class="freework-merupakan-platform">Rating ${freelancer.rating}</div>
+								</div>
+								<div class="iconlokasi-parent">
+									<img class="iconlokasi" alt="" src="Icon/Lokasi.svg">
+									<div class="freework-merupakan-platform">${freelancer.location}</div>
+								</div>
+								<div class="iconstar-parent">
+									<img class="icontas" alt="" src="Icon/Tas.svg">
+									<div class="freework-merupakan-platform">${freelancer.jobs} Job Telah Selesai</div>
+								</div>
+								<div class="iconmoney-parent">
+									<img class="iconmoney" alt="" src="Icon/Money.svg">
+									<div class="freework-merupakan-platform">${freelancer.price}/Project</div>
+								</div>
+								<div class="iconmoney-parent">
+									<img class="iconbenar" alt="" src="Icon/Benar.svg">
+									<div class="freework-merupakan-platform">${freelancer.status}</div>
+								</div>
+								`;
+								container.appendChild(element);
+							});
+							});
+						</script>
+        				<!-- <div class="michael">
+          					<div class="frame-parent">
+            					<div class="frame-child">
+                                    <img class="icon-user" alt="" src="Icon\User putih.svg">
+                                </div>  
+            						<b class="michael1">Michael</b>
+          					</div>
+          					<div class="button-freelancer">
+            						<div class="button">
+              							<div class="text">Chat Michael</div>
+              							<img class="iconchat" alt="" src="Icon/Chat.svg">
+              							
+            						</div>
+            						<div class="button">
+              							<div class="text">Rekrut Michael</div>
+              							<img class="iconchat" alt="" src="Icon/Next putih.svg">
+              							
+            						</div>
+          					</div>
+          					<div class="iconstar-parent">
+            						<img class="iconstar" alt="" src="Icon/Star.svg">
+            						
+            						<div class="text">Rating 4.9</div>
+          					</div>
+          					<div class="iconlokasi-parent">
+            						<img class="iconlokasi" alt="" src="Icon/Lokasi.svg">
+            						
+            						<div class="text">Jakarta, Indonesia</div>
+          					</div>
+          					<div class="iconstar-parent">
+            						<img class="icontas" alt="" src="Icon/Tas.svg">
+            						
+            						<div class="text">80 Job Telah Selesai</div>
+          					</div>
+          					<div class="iconmoney-parent">
+            						<img class="iconmoney" alt="" src="Icon/Money.svg">
+            						
+            						<div class="text">Rp 1.000.000,00/Project</div>
+          					</div>
+          					<div class="iconmoney-parent">
+            						<img class="iconbenar" alt="" src="Icon/Benar.svg">
+            						
+            						<div class="text">Aktif Bekerja</div>
+          					</div>
+        				</div> -->
+        				<div class="frame-group">
+          					<div class="machine-learningai-chat-bot-parent">
+            						<b class="text">Machine Learning/AI, Chat bot</b>
+            						<div class="keahlian-parent">
+              							<div class="keahlian">Keahlian</div>
+              							<div class="frame-container">
+                								<div class="machine-learningai-wrapper">
+                  									<div class="text">Desain asset Graphic</div>
+                								</div>
+                								<!-- <div class="chat-bot-wrapper">
+                  									<div class="text">Chat Bot</div>
+                								</div>
+                								<div class="nlp-wrapper">
+                  									<div class="text">NLP</div>
+                								</div> -->
+              							</div>
+            						</div>
+          					</div>
+          					<div class="frame-div">
+                                <div class="machine-learningai-chat-bot-parent">
+                                <div class="keahlian">Tentang Cyntia</div>
+                                <div class="halo-saya-michael-seorang-fr-wrapper">
+                                    <div class="halo-saya-michael-container">
+                                    <p class="halo-saya-michael">
+                                        Halo! Saya Cyntia, seorang freelancer profesional di bidang Desain Grafis yang berdomisili di Jakarta. Saya memiliki pengalaman lebih dari 3 tahun dalam menciptakan berbagai aset visual untuk kebutuhan digital dan cetak, mulai dari branding, ilustrasi, desain promosi, hingga konten sosial media yang menarik dan efektif.
+                                    </p>
+                                    <p class="halo-saya-michael">&nbsp;</p>
+                                    <p class="halo-saya-michael">
+                                        Saya ahli menggunakan berbagai tools desain modern seperti Adobe Illustrator, Photoshop, Figma, dan Canva. Dengan pendekatan kreatif yang kuat dan pemahaman terhadap tren desain saat ini, saya selalu berusaha menghasilkan karya yang tidak hanya estetis tetapi juga memiliki nilai fungsional dan sesuai dengan tujuan brand klien.
+                                    </p>
+                                    <p class="halo-saya-michael">Beberapa proyek yang sering saya kerjakan meliputi:</p>
+                                    <ul class="sistem-rekomendasi-berbasis-ml">
+                                        <li class="sistem-rekomendasi-berbasis">Desain logo dan identitas visual</li>
+                                        <li class="sistem-rekomendasi-berbasis">Poster, brosur, dan materi promosi</li>
+                                        <li class="sistem-rekomendasi-berbasis">Ilustrasi untuk media sosial dan infografis</li>
+                                        <li class="sistem-rekomendasi-berbasis">Desain UI sederhana untuk website atau aplikasi</li>
+                                        <li class="sistem-rekomendasi-berbasis">Konten visual marketing dan branding</li>
+                                    </ul>
+                                    <p class="halo-saya-michael">&nbsp;</p>
+                                    <p class="halo-saya-michael">
+                                        Saya terbiasa bekerja secara remote, fleksibel dengan brief dari berbagai jenis industri, dan terbuka untuk revisi demi hasil yang maksimal. Dalam setiap proyek, saya selalu mengutamakan komunikasi yang jelas, timeline yang terukur, serta hasil desain yang orisinal dan memikat.
+                                    </p>
+                                    <p class="halo-saya-michael">
+                                        Jika Anda mencari desainer grafis yang bisa menghadirkan visual profesional untuk mendukung bisnis atau brand Anda, saya siap bekerja sama dan membantu mewujudkan ide kreatif Anda menjadi kenyataan.
+                                    </p>
+                                    </div>
+                                </div>
+                                </div>
+            						<a href="Design belum login (Pekerja).html" class="button4">
+              							<div class="freework-merupakan-platform">Lebih Sedikit</div>
+              							<img class="iconup" alt="" src="Icon/Up putih.svg">
+              							
+                                    </a>
+          					</div>
+        				</div>
+        				<!-- <div class="icon">
+          					<img class="vector-icon" alt="" src="Icon/Unlove.svg">
+          					
+        				</div> -->
+
+                        <div class="icon" onclick="toggleLove(this)">
+                            <img class="vector-icon" src="Icon/Unlove.svg" alt="Love Icon">
+                        </div>
+                        <script>
+                        function toggleLove(element) {
+                            const img = element.querySelector("img");
+                            const currentSrc = img.getAttribute("src");
+
+                            if (currentSrc.includes("Unlove.svg")) {
+                            img.setAttribute("src", "Icon/Love.svg");
+                            } else {
+                            img.setAttribute("src", "Icon/Unlove.svg");
+                            }
+                        }
+                        </script>
+
+      			</div>
+      			<div class="frame-parent1">
+        				<div class="portofolio-wrapper">
+          					<div class="portofolio">PortoFolio</div>
+        				</div>
+        				<div class="frame-parent2">
+          					<img class="frame-item" alt="" src="foto\portofolio.png">
+          					
+          					<img class="frame-item" alt="" src="foto\portofolio.png">
+          					
+          					<img class="frame-item" alt="" src="foto\portofolio.png">
+          					
+        				</div>
+      			</div>
+      			<div class="review-wrapper">
+        				<div class="review">Review</div>
+      			</div>
+      			<div class="frame-parent3">
+        				<div class="tugas-selesai-wrapper">
+          					<div class="text">Tugas Selesai</div>
+        				</div>
+        				<div class="dalam-pengerjaan-wrapper">
+          					<div class="text">Dalam Pengerjaan</div>
+        				</div>
+        				<div class="frame-parent4">
+          					<div class="daniel-w-proyek-chatbot-cus-wrapper">
+            						<div class="daniel-w-container">
+              							<p class="daniel-w">Dina P. – Proyek Desain Poster & Banner Promosi <br>Rating: ★★★★★</p>
+              							<p class="blank-line3">&nbsp;</p>
+              							<p class="halo-saya-michael">28 Januari 2025</p>
+              							<p class="halo-saya-michael">Cyntia sangat memahami brief kami dengan cepat. Desain yang ia buat tidak hanya menarik secara visual, tapi juga sesuai dengan branding dan pesan yang ingin kami sampaikan. Nanti ke Cyntia lagi kalau memerlukannya. Sangat puas dengan hasil akhirnya.</p>
+            						</div>
+          					</div>
+          					<div class="rafiq-f-proyek-chatbot-pela-wrapper">
+            						<div class="rafiq-f-container">
+              							<p class="daniel-w">Hendra S. – Proyek Branding Usaha Kuliner</p>
+              							<p class="blank-line3">&nbsp;</p>
+              							<p class="halo-saya-michael">20 Juni 2025-Sekarang</p>
+              							<p class="halo-saya-michael">Kami baru bekerja selama dua minggu, tetapi saya sudah sangat puas dengan komunikasi Cyntia yang ramah dan profesional. Ia langsung memahami konsep desain kami dan memberikan hasil awal yang estetis, relevan, serta sesuai dengan arahan brand.</p>
+            						</div>
+          					</div>
+          					<div class="laras-a-sistem-klasifikasi-wrapper">
+            						<div class="daniel-w-container">
+              							<p class="daniel-w">Rina M. – Desain Konten Sosial Media dan website <br>Rating: ★★★★★</p>
+              							<p class="blank-line3">&nbsp;</p>
+              							<p class="halo-saya-michael">5 Maret 2025</p>
+              							<p class="halo-saya-michael">Cyntia membantu kami membuat konten feed Instagram yang estetik dan konsisten. Setiap desain terasa segar dan sesuai tren. Engagement kami meningkat drastis sejak menggunakan jasanya.</p>
+            						</div>
+          					</div>
+          					<div class="yuni-r-prediksi-penjualan-d-wrapper">
+            						<div class="yuni-r-container">
+              							<p class="daniel-w">Putri L. – Proyek Ilustrasi UI Aplikasi</p>
+              							<p class="blank-line3">&nbsp;</p>
+              							<p class="halo-saya-michael">22 Juni 2024-Sekarang</p>
+              							<p class="halo-saya-michael">Cyntia membuat ilustrasi untuk onboarding app kami. Gayanya clean, menarik, dan sangat cocok dengan tone aplikasi kami. Proyek selesai tepat waktu, dan komunikasi selama pengerjaan sangat baik.</p>
+            						</div>
+          					</div>
+          					<div class="william-t-model-prediksi-pe-wrapper">
+            						<div class="daniel-w-container">
+              							<p class="halo-saya-michael">William T. – Pembuatan Company Profile Visual <br>Rating: ★★★★★</p>
+              							<p class="halo-saya-michael">&nbsp;</p>
+              							<p class="pekerjaan-cepat-presisi">20 Desember 2024</p>
+              							<p class="pekerjaan-cepat-presisi">Hasil desain dari Cyntia sangat elegan dan sesuai dengan image perusahaan kami. File final sangat rapi dan siap cetak. Dia juga menjelaskan alur pengerjaan dengan jelas. Recommended!</p>
+            						</div>
+          					</div>
+          					<div class="putri-n-pembuatan-chatbot-i-wrapper">
+            						<div class="yuni-r-container">
+              							<p class="daniel-w">Maya R. – Desain Feed Kampanye Sosial Media <br>Rating: ★★★★★</p>
+              							<p class="blank-line3">&nbsp;</p>
+              							<p class="halo-saya-michael">17 November 2024</p>
+              							<p class="halo-saya-michael">Kami sangat puas bekerja dengan Cyntia. Desain sosial medianya konsisten, informatif, dan engaging. Dia juga memberi kami template agar tim kami bisa lanjut sendiri setelah proyek selesai. Profesional dan helpful!</p>
+            						</div>
+          					</div>
+        				</div>
+        				<div class="next-halaman">
+          					<div class="berikutnya">Berikutnya</div>
+          					<div class="iconback-parent">
+            						<img class="icontas" alt="" src="Icon/Back.svg">
+            						
+            						<div class="frame-parent5">
+              							<div class="wrapper">
+                								<div class="berikutnya">1</div>
+              							</div>
+              							<div class="container">
+                								<div class="berikutnya">2</div>
+              							</div>
+              							<div class="container">
+                								<div class="berikutnya">3</div>
+              							</div>
+              							<div class="container">
+                								<div class="berikutnya">4</div>
+              							</div>
+              							<div class="container">
+                								<div class="berikutnya">5</div>
+              							</div>
+              							<div class="container">
+                								<div class="berikutnya">6</div>
+              							</div>
+              							<div class="container">
+                								<div class="berikutnya">8</div>
+              							</div>
+              							<div class="container">
+                								<div class="berikutnya">9</div>
+              							</div>
+              							<div class="container">
+                								<div class="berikutnya">10</div>
+              							</div>
+            						</div>
+            						<img class="icontas" alt="" src="Icon/Next.svg">
+            						
+          					</div>
+        				</div>
+      			</div>
+    		</div>
+    		<div class="navbar-user">
+      			<div class="logo-brand">
+        				<b class="text">FreeWork</b>
+      			</div>
+      			<div class="search">
+        				<img class="iconsearch" alt="" src="Icon/Search.svg">
+        				
+        				<div class="text">Cari bidang apa?</div>
+      			</div>
+      			<a href="Teknologi (Pekerja).html" class="title-prakerja nav-link" id="cari-pekerja">Cari Pekerja</a>
+				<a href="Teknologi (kerja).html" class="title-prakerja nav-link" id="kerja-langsung">Kerja langsung</a>
+      			<div class="iconmoney-parent">
+        				<div class="text">Bahasa</div>
+        				<img class="iconglobal" alt="" src="Icon/Global putih.svg">
+        				
+      			</div>
+      			<div class="button6">
+        				<div class="text">Masuk</div>
+        				<img class="iconchat" alt="" src="Icon/Login oren.svg">
+        				
+      			</div>
+    		</div>
+    		<div class="footer">
+      			<div class="freework-parent">
+        				<b class="berikutnya">FreeWork</b>
+        				<div class="freework-merupakan-platform-fr-wrapper">
+          					<div class="text">FreeWork merupakan platform freelancer untuk mempermudah orang-orang bisa mendapatkan pekerjaannya atau sebagai penghasilan sampingan.</div>
+        				</div>
+        				<div class="sosmed">
+          					<img class="iconlinkedin" alt="" src="Icon/Linkedin.svg">
+          					
+          					<img class="iconyoutube" alt="" src="Icon/Youtube.svg">
+          					
+          					<img class="icontiktok" alt="" src="Icon/Tiktok.svg">
+          					
+          					<img class="iconinstagram" alt="" src="Icon/Instagram.svg">
+          					
+          					<img class="iconfacebook" alt="" src="Icon/Facebook.svg">
+          					
+        				</div>
+      			</div>
+      			<div class="footer-pilihan-parent">
+        				<div class="footer-pilihan">
+          					<div class="untuk-freelancer-parent">
+            						<b class="berikutnya">Untuk Freelancer</b>
+            						<div class="syarat-ketentuan-freelancer-container">
+              							<p class="halo-saya-michael">Syarat ketentuan Freelancer</p>
+              							<p class="halo-saya-michael">&nbsp;</p>
+              							<p class="halo-saya-michael">Petunjuk Freelancer</p>
+              							<p class="halo-saya-michael">&nbsp;</p>
+              							<p class="halo-saya-michael">Manfaat Freelancer</p>
+              							<p class="halo-saya-michael">&nbsp;</p>
+              							<p class="halo-saya-michael">Komunitas</p>
+            						</div>
+          					</div>
+          					<div class="untuk-klien-parent">
+            						<b class="berikutnya">Untuk Klien</b>
+            						<div class="syarat-ketentuan-freelancer-container">
+              							<p class="halo-saya-michael">Syarat ketentuan Klien</p>
+              							<p class="halo-saya-michael">&nbsp;</p>
+              							<p class="halo-saya-michael">Petunjuk Klien</p>
+            						</div>
+          					</div>
+          					<div class="untuk-freelancer-parent">
+            						<b class="berikutnya">Perusahaan</b>
+            						<div class="syarat-ketentuan-freelancer-container">
+              							<p class="halo-saya-michael">Tentang Kami</p>
+              							<p class="halo-saya-michael">&nbsp;</p>
+              							<p class="halo-saya-michael">Syarat Ketentuan</p>
+              							<p class="halo-saya-michael">&nbsp;</p>
+              							<p class="halo-saya-michael">Peraturan Privasi</p>
+              							<p class="halo-saya-michael">&nbsp;</p>
+              							<p class="halo-saya-michael">Customer Service</p>
+            						</div>
+          					</div>
+        				</div>
+        				<div class="iconcopyright-parent">
+          					<img class="iconcopyright" alt="" src="Icon/Copyright.svg">
+          					
+          					<div class="copyright-2024-freework">Copyright 2024. FreeWork. All Rights Reserved</div>
+        				</div>
+      			</div>
+    		</div>
+  	</div>
+  	
+  	
+  	
+  	
+  	<script>
+    		var headlineProgramAContainer = document.getElementById("headlineProgramAContainer");
+    		if(headlineProgramAContainer) {
+      			headlineProgramAContainer.addEventListener("click", function (e) {
+        				// Add your code here
+      			});
+    		}</script></body>
+</html>

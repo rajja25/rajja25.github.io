@@ -1,0 +1,13 @@
+[
+  {
+    "id": 1,
+    "name": "Michael",
+    "rating": 4.9,
+    "skills": "Machine Learning/AI, Chat bot, NLP",
+    "jobs": 80,
+    "price": "Rp 1.000.000,00",
+    "avatar": "Icon/User putih.svg",
+    "location": "Jakarta, Indonesia",
+    "status": "Aktif Bekerja"
+  }
+]

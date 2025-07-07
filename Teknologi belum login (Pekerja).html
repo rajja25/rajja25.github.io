@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="initial-scale=1, width=device-width">
+  	
+  	<link rel="stylesheet"  href="css/Teknologi belum login (Pekerja).css" />
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" />
+  	
+  	
+  	
+</head>
+<body>
+  	
+  	<div class="teknologi-michael-belum-login">
+    		<div class="footer">
+      			<div class="freework-parent">
+        				<b class="freework">FreeWork</b>
+        				<div class="freework-merupakan-platform-fr-wrapper">
+          					<div class="freework-merupakan-platform">FreeWork merupakan platform freelancer untuk mempermudah orang-orang bisa mendapatkan pekerjaannya atau sebagai penghasilan sampingan.</div>
+        				</div>
+        				<div class="sosmed">
+          					<img class="iconlinkedin" alt="" src="Icon/Linkedin.svg">
+          					
+          					<img class="iconyoutube" alt="" src="Icon/Youtube.svg">
+          					
+          					<img class="icontiktok" alt="" src="Icon/Tiktok.svg">
+          					
+          					<img class="iconinstagram" alt="" src="Icon/Instagram.svg">
+          					
+          					<img class="iconfacebook" alt="" src="Icon/Facebook.svg">
+          					
+        				</div>
+      			</div>
+      			<div class="footer-pilihan-parent">
+        				<div class="footer-pilihan">
+          					<div class="untuk-freelancer-parent">
+            						<b class="freework">Untuk Freelancer</b>
+            						<div class="syarat-ketentuan-freelancer-container">
+              							<p class="syarat-ketentuan-freelancer">Syarat ketentuan Freelancer</p>
+              							<p class="syarat-ketentuan-freelancer">&nbsp;</p>
+              							<p class="syarat-ketentuan-freelancer">Petunjuk Freelancer</p>
+              							<p class="syarat-ketentuan-freelancer">&nbsp;</p>
+              							<p class="syarat-ketentuan-freelancer">Manfaat Freelancer</p>
+              							<p class="syarat-ketentuan-freelancer">&nbsp;</p>
+              							<p class="syarat-ketentuan-freelancer">Komunitas</p>
+            						</div>
+          					</div>
+          					<div class="untuk-klien-parent">
+            						<b class="freework">Untuk Klien</b>
+            						<div class="syarat-ketentuan-freelancer-container">
+              							<p class="syarat-ketentuan-freelancer">Syarat ketentuan Klien</p>
+              							<p class="syarat-ketentuan-freelancer">&nbsp;</p>
+              							<p class="syarat-ketentuan-freelancer">Petunjuk Klien</p>
+            						</div>
+          					</div>
+          					<div class="untuk-freelancer-parent">
+            						<b class="freework">Perusahaan</b>
+            						<div class="syarat-ketentuan-freelancer-container">
+              							<p class="syarat-ketentuan-freelancer">Tentang Kami</p>
+              							<p class="syarat-ketentuan-freelancer">&nbsp;</p>
+              							<p class="syarat-ketentuan-freelancer">Syarat Ketentuan</p>
+              							<p class="syarat-ketentuan-freelancer">&nbsp;</p>
+              							<p class="syarat-ketentuan-freelancer">Peraturan Privasi</p>
+              							<p class="syarat-ketentuan-freelancer">&nbsp;</p>
+              							<p class="syarat-ketentuan-freelancer">Customer Service</p>
+            						</div>
+          					</div>
+        				</div>
+        				<div class="iconcopyright-parent">
+          					<img class="iconcopyright" alt="" src="Icon/Copyright.svg">
+          					
+          					<div class="copyright-2024-freework">Copyright 2024. FreeWork. All Rights Reserved</div>
+        				</div>
+      			</div>
+    		</div>
+    		<div class="paling-populer">
+      			<div class="iconmonitor-parent">
+        				<img class="iconmonitor" alt="" src="Icon/Monitor.svg">
+        				
+        				<b class="teknologi">Teknologi</b>
+      			</div>
+      			<div class="headline-programa" id="headlineProgramAContainer">
+        				<img class="iconhome" alt="" src="Icon/Home.svg">
+        				
+        				<!-- <div class="freework-merupakan-platform">Kembali ke halaman utama</div> -->
+                        <a href="Halaman Utama.html" id="Kembali ke halaman utama">Kembali ke halaman utama</a>
+      			</div>
+      			<div class="michael-parent">
+                    <div class="freelancer-list" id="freelancerContainer"></div>
+						<script>
+						fetch("michael.json")
+							.then((response) => response.json())
+							.then((data) => {
+							const container = document.getElementById("freelancerContainer");
+
+							data.forEach((freelancer) => {
+								const element = document.createElement("div");
+								element.classList.add("michael");
+								element.innerHTML = `
+								<div class="frame-parent">
+									<div class="frame-child">
+									<img class="icon-user" alt="" src="${freelancer.avatar}">
+									</div>
+									<b class="michael1">${freelancer.name}</b>
+								</div>
+								<div class="button-freelancer">
+									<div class="button">
+									<div class="freework-merupakan-platform">Chat ${freelancer.name}</div>
+									<img class="iconchat" alt="" src="Icon/Chat.svg">
+									</div>
+									<div class="button">
+									<div class="freework-merupakan-platform">Rekrut ${freelancer.name}</div>
+									<img class="iconchat" alt="" src="Icon/Next putih.svg">
+									</div>
+								</div>
+								<div class="iconstar-parent">
+									<img class="iconstar" alt="" src="Icon/Star.svg">
+									<div class="freework-merupakan-platform">Rating ${freelancer.rating}</div>
+								</div>
+								<div class="iconlokasi-parent">
+									<img class="iconlokasi" alt="" src="Icon/Lokasi.svg">
+									<div class="freework-merupakan-platform">${freelancer.location}</div>
+								</div>
+								<div class="iconstar-parent">
+									<img class="icontas" alt="" src="Icon/Tas.svg">
+									<div class="freework-merupakan-platform">${freelancer.jobs} Job Telah Selesai</div>
+								</div>
+								<div class="iconmoney-parent">
+									<img class="iconmoney" alt="" src="Icon/Money.svg">
+									<div class="freework-merupakan-platform">${freelancer.price}/Project</div>
+								</div>
+								<div class="iconmoney-parent">
+									<img class="iconbenar" alt="" src="Icon/Benar.svg">
+									<div class="freework-merupakan-platform">${freelancer.status}</div>
+								</div>
+								`;
+								container.appendChild(element);
+							});
+							});
+						</script>
+        				<!-- <div class="michael">
+          					<div class="frame-parent">
+            					<div class="frame-child">
+                                    <img class="icon-user" alt="" src="Icon\User putih.svg">
+                                </div>  
+            						<b class="michael1">Michael</b>
+          					</div>
+          					<div class="button-freelancer">
+            						<div class="button">
+              							<div class="freework-merupakan-platform">Chat Michael</div>
+              							<img class="iconchat" alt="" src="Icon/Chat.svg">
+              							
+            						</div>
+            						<div class="button">
+              							<div class="freework-merupakan-platform">Rekrut Michael</div>
+              							<img class="iconchat" alt="" src="Icon/Next putih.svg">
+              							
+            						</div>
+          					</div>
+          					<div class="iconstar-parent">
+            						<img class="iconstar" alt="" src="Icon/Star.svg">
+            						
+            						<div class="freework-merupakan-platform">Rating 4.9</div>
+          					</div>
+          					<div class="iconlokasi-parent">
+            						<img class="iconlokasi" alt="" src="Icon/Lokasi.svg">
+            						
+            						<div class="freework-merupakan-platform">Jakarta, Indonesia</div>
+          					</div>
+          					<div class="iconstar-parent">
+            						<img class="icontas" alt="" src="Icon/Tas.svg">
+            						
+            						<div class="freework-merupakan-platform">80 Job Telah Selesai</div>
+          					</div>
+          					<div class="iconmoney-parent">
+            						<img class="iconmoney" alt="" src="Icon/Money.svg">
+            						
+            						<div class="freework-merupakan-platform">Rp 1.000.000,00/Project</div>
+          					</div>
+          					<div class="iconmoney-parent">
+            						<img class="iconbenar" alt="" src="Icon/Benar.svg">
+            						
+            						<div class="freework-merupakan-platform">Aktif Bekerja</div>
+          					</div>
+        				</div> -->
+        				<div class="frame-group">
+          					<div class="machine-learningai-chat-bot-parent">
+            						<b class="freework-merupakan-platform">Machine Learning/AI, Chat bot</b>
+            						<div class="keahlian-parent">
+              							<div class="keahlian">Keahlian</div>
+              							<div class="frame-container">
+                								<div class="machine-learningai-wrapper">
+                  									<div class="freework-merupakan-platform">Machine Learning/AI</div>
+                								</div>
+                								<div class="chat-bot-wrapper">
+                  									<div class="freework-merupakan-platform">Chat Bot</div>
+                								</div>
+                								<div class="nlp-wrapper">
+                  									<div class="freework-merupakan-platform">NLP</div>
+                								</div>
+              							</div>
+            						</div>
+          					</div>
+          					<div class="frame-div">
+            						<div class="machine-learningai-chat-bot-parent">
+              							<div class="keahlian">Tentang Michael</div>
+              							<div class="halo-saya-michael-seorang-fr-wrapper">
+                								<div class="halo-saya-michael-container">
+                  									<p class="syarat-ketentuan-freelancer">Halo! Saya Michael, seorang freelancer profesional asal Jakarta yang memiliki spesialisasi dalam bidang Machine Learning (ML), Artificial Intelligence (AI), dan pengembangan Chatbot. Dengan latar belakang teknis dan pengalaman lebih dari 4 tahun di industri teknologi, saya telah membantu puluhan klien dalam membangun solusi cerdas berbasis data yang efisien, presisi, dan berdampak nyata.</p>
+                  									<p class="syarat-ketentuan-freelancer">&nbsp;</p>
+                  									<p class="syarat-ketentuan-freelancer">Keahlian saya mencakup seluruh siklus pengembangan AI, mulai dari data preprocessing, model training, evaluasi model, hingga implementasi ke dalam aplikasi nyata. Saya juga menguasai berbagai teknologi dan framework modern seperti Python, TensorFlow, Keras, Scikit-learn, PyTorch, serta tools integrasi chatbot seperti Dialogflow, Rasa, Microsoft Bot Framework, dan API untuk Telegram, WhatsApp, dan Facebook Messenger.</p>
+                  									<p class="syarat-ketentuan-freelancer">Sebagian besar proyek yang saya tangani berfokus pada:</p>
+                  									<ul class="sistem-rekomendasi-berbasis-ml">
+                    										<li class="sistem-rekomendasi-berbasis">Sistem rekomendasi berbasis ML</li>
+                    										<li class="sistem-rekomendasi-berbasis">Deteksi anomali dan klasifikasi data</li>
+                    										<li class="sistem-rekomendasi-berbasis">Automasi proses bisnis menggunakan AI</li>
+                    										<li class="sistem-rekomendasi-berbasis">Pengembangan chatbot pintar untuk customer service, edukasi, dan e-commerce</li>
+                    										<li class="sistem-rekomendasi-berbasis">Natural Language Processing (NLP) dan analisis sentimen</li>
+                  									</ul>
+                  									<p class="syarat-ketentuan-freelancer">&nbsp;</p>
+                  									<p class="syarat-ketentuan-freelancer">Saya juga terbiasa bekerja dalam berbagai model kerja, mulai dari proyek skala kecil, kolaborasi dalam tim pengembangan, hingga penyusunan solusi end-to-end untuk perusahaan startup dan UMKM.</p>
+                  									<p class="syarat-ketentuan-freelancer">Saya percaya bahwa teknologi AI seharusnya tidak hanya canggih, tetapi juga mudah digunakan, terukur, dan relevan dengan kebutuhan bisnis klien. Karena itu, dalam setiap proyek, saya selalu memprioritaskan komunikasi yang terbuka, estimasi waktu yang realistis, serta kualitas implementasi yang tinggi.</p>
+                  									<p class="syarat-ketentuan-freelancer">&nbsp;</p>
+                  									<p class="syarat-ketentuan-freelancer">Jika Anda membutuhkan solusi AI yang andal, chatbot yang responsif dan cerdas, atau hanya ingin berdiskusi mengenai ide proyek Anda—saya siap membantu mewujudkannya.</p>
+                								</div>
+              							</div>
+            						</div>
+            						<a href="Teknologi belum login panjang (Pekerja).html" class="button4">
+              							<div class="freework-merupakan-platform">Selengkapnya</div>
+              							<img class="icondown" alt="" src="Icon/Down putih.svg">
+              							
+                                    </a>
+                                    
+          					</div>
+        				</div>
+        				<!-- <div class="icon">
+          					<img class="vector-icon" alt="" src="Icon/Unlove.svg">
+          					
+        				</div> -->
+
+                        <div class="icon" onclick="toggleLove(this)">
+                            <img class="vector-icon" src="Icon/Unlove.svg" alt="Love Icon">
+                        </div>
+                        <script>
+                        function toggleLove(element) {
+                            const img = element.querySelector("img");
+                            const currentSrc = img.getAttribute("src");
+
+                            if (currentSrc.includes("Unlove.svg")) {
+                            img.setAttribute("src", "Icon/Love.svg");
+                            } else {
+                            img.setAttribute("src", "Icon/Unlove.svg");
+                            }
+                        }
+                        </script>
+
+      			</div>
+      			<div class="frame-parent1">
+        				<div class="portofolio-wrapper">
+          					<div class="portofolio">PortoFolio</div>
+        				</div>
+        				<div class="frame-parent2">
+          					<img class="frame-item" alt="" src="foto/portofolio.png">
+          					
+          					<img class="frame-item" alt="" src="foto/portofolio.png">
+          					
+          					<img class="frame-item" alt="" src="foto/portofolio.png">
+          					
+        				</div>
+      			</div>
+      			<div class="review-wrapper">
+        				<div class="review">Review</div>
+      			</div>
+      			<div class="frame-parent3">
+        				<div class="tugas-selesai-wrapper">
+          					<div class="freework-merupakan-platform">Tugas Selesai</div>
+        				</div>
+        				<div class="dalam-pengerjaan-wrapper">
+          					<div class="freework-merupakan-platform">Dalam Pengerjaan</div>
+        				</div>
+        				<div class="frame-parent4">
+          					<div class="daniel-w-proyek-chatbot-cus-wrapper">
+            						<div class="daniel-w-container">
+              							<p class="daniel-w">Daniel W. – Proyek Chatbot Customer Service (Retail E-Commerce) <br>Rating: ★★★★★</p>
+              							<p class="blank-line10">&nbsp;</p>
+              							<p class="syarat-ketentuan-freelancer">20 Januari 2025</p>
+              							<p class="syarat-ketentuan-freelancer">Michael is truly exceptional. He helped us build an intelligent chatbot that cut down our customer response time by 60%. The integration with WhatsApp API was smooth and reliable. Communication was clear, and he even delivered ahead of schedule.</p>
+            						</div>
+          					</div>
+          					<div class="rafiq-f-proyek-chatbot-pela-wrapper">
+            						<div class="rafiq-f-container">
+              							<p class="daniel-w">Rafiq F. – Proyek Chatbot Pelayanan Publik</p>
+              							<p class="blank-line10">&nbsp;</p>
+              							<p class="syarat-ketentuan-freelancer">11 Mei 2025-Sekarang</p>
+              							<p class="syarat-ketentuan-freelancer">Kami baru berjalan di minggu kedua, tapi saya sudah sangat terkesan dengan komunikasi Michael yang responsif dan profesional. Ia sangat memahami kebutuhan kami dan cepat memberikan solusi teknis yang masuk akal. Prototipe awal chatbot-nya sudah sesuai ekspektasi. Looking forward to the final result!</p>
+            						</div>
+          					</div>
+          					<div class="laras-a-sistem-klasifikasi-wrapper">
+            						<div class="daniel-w-container">
+              							<p class="daniel-w">Laras A. – Sistem Klasifikasi Data Penelitian Kesehatan <br>Rating: ★★★★★</p>
+              							<p class="blank-line10">&nbsp;</p>
+              							<p class="syarat-ketentuan-freelancer">12 Mei 2024</p>
+              							<p class="syarat-ketentuan-freelancer">Sangat profesional! Michael menjelaskan alur Machine Learning dengan sangat rinci sehingga tim kami yang non-teknis pun bisa mengikuti. Model yang ia bangun sangat akurat dan mudah digunakan. Sangat direkomendasikan!</p>
+            						</div>
+          					</div>
+          					<div class="yuni-r-prediksi-penjualan-d-wrapper">
+            						<div class="yuni-r-container">
+              							<p class="daniel-w">Yuni R. – Prediksi Penjualan dengan Machine Learning</p>
+              							<p class="blank-line10">&nbsp;</p>
+              							<p class="syarat-ketentuan-freelancer">18 Mei 2024</p>
+              							<p class="syarat-ketentuan-freelancer">Michael baru saja menyelesaikan tahap awal analisis data, dan hasilnya sangat rapi serta terdokumentasi dengan baik. Ia juga sangat terbuka terhadap masukan dari tim kami. Proyek masih berjalan, tapi kami sangat puas dengan kolaborasinya sejauh ini.</p>
+            						</div>
+          					</div>
+          					<div class="william-t-model-prediksi-pe-wrapper">
+            						<div class="daniel-w-container">
+              							<p class="syarat-ketentuan-freelancer">William T. – Model Prediksi Permintaan Produk (Retail) <br>Rating: ★★★★★</p>
+              							<p class="syarat-ketentuan-freelancer">&nbsp;</p>
+              							<p class="pekerjaan-cepat-presisi">20 Desember 2023</p>
+              							<p class="pekerjaan-cepat-presisi">Pekerjaan cepat, presisi tinggi. Michael sangat menguasai data dan mampu menjelaskan insight dengan bahasa sederhana. Visualisasi dan model prediksi yang dibuat sangat membantu dalam pengambilan keputusan.</p>
+            						</div>
+          					</div>
+          					<div class="putri-n-pembuatan-chatbot-i-wrapper">
+            						<div class="yuni-r-container">
+              							<p class="daniel-w">Putri N. – Pembuatan Chatbot Interaktif untuk Kampanye Sosial <br>Rating: ★★★★★</p>
+              							<p class="blank-line10">&nbsp;</p>
+              							<p class="syarat-ketentuan-freelancer">17 April 2023</p>
+              							<p class="syarat-ketentuan-freelancer">Michael bukan hanya developer, tapi juga problem solver sejati. Chatbot edukasi yang dia bangun sangat interaktif, dan dia juga membantu tim kami memahami cara memeliharanya ke depan. Terima kasih!</p>
+            						</div>
+          					</div>
+        				</div>
+        				<div class="next-halaman">
+          					<div class="freework">Berikutnya</div>
+          					<div class="iconback-parent">
+            						<img class="icontas" alt="" src="Icon/Back.svg">
+            						
+            						<div class="frame-parent5">
+              							<div class="wrapper">
+                								<div class="freework">1</div>
+              							</div>
+              							<div class="container">
+                								<div class="freework">2</div>
+              							</div>
+              							<div class="container">
+                								<div class="freework">3</div>
+              							</div>
+              							<div class="container">
+                								<div class="freework">4</div>
+              							</div>
+              							<div class="container">
+                								<div class="freework">5</div>
+              							</div>
+              							<div class="container">
+                								<div class="freework">6</div>
+              							</div>
+              							<div class="container">
+                								<div class="freework">8</div>
+              							</div>
+              							<div class="container">
+                								<div class="freework">9</div>
+              							</div>
+              							<div class="container">
+                								<div class="freework">10</div>
+              							</div>
+            						</div>
+            						<img class="icontas" alt="" src="Icon/Next.svg">
+            						
+          					</div>
+        				</div>
+      			</div>
+    		</div>
+    		<div class="navbar-user">
+      			<div class="logo-brand">
+        				<b class="freework-merupakan-platform">FreeWork</b>
+      			</div>
+      			<div class="search">
+        				<img class="iconsearch" alt="" src="Icon/Search.svg">
+        				
+        				<div class="freework-merupakan-platform">Cari bidang apa?</div>
+      			</div>
+      			<a href="Teknologi (Pekerja).html" class="title-prakerja nav-link" id="cari-pekerja">Cari Pekerja</a>
+				<a href="Teknologi (kerja).html" class="title-prakerja nav-link" id="kerja-langsung">Kerja langsung</a>
+      			<div class="iconmoney-parent">
+        				<div class="freework-merupakan-platform">Bahasa</div>
+        				<img class="iconglobal" alt="" src="Icon/Global putih.svg">
+        				
+      			</div>
+      			<div class="button6">
+        				<div class="freework-merupakan-platform">Masuk</div>
+        				<img class="iconchat" alt="" src="Icon/Login oren.svg">
+        				
+      			</div>
+    		</div>
+  	</div>
+  	
+  	
+  	
+  	
+  	<script>
+    		var headlineProgramAContainer = document.getElementById("headlineProgramAContainer");
+    		if(headlineProgramAContainer) {
+      			headlineProgramAContainer.addEventListener("click", function (e) {
+        				// Add your code here
+      			});
+    		}</script></body>
+</html>

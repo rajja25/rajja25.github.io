@@ -1,0 +1,13 @@
+[
+  {
+    "id": 1,
+    "name": "Cyntia",
+    "rating": 4.9,
+    "skills": "Design Graphic",
+    "jobs": 76,
+    "price": "Rp 500.000,00",
+    "avatar": "Icon/User putih.svg",
+    "location": "Surabaya, Indonesia",
+    "status": "Aktif Bekerja"
+  }
+]
